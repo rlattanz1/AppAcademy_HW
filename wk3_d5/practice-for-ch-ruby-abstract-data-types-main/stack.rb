@@ -1,5 +1,5 @@
 class Stack
-attr_reader :stack
+
     def initialize
         @stack = []
     end
@@ -15,7 +15,7 @@ attr_reader :stack
 
         #or
 
-        stack[0...-1]
+        # stack[0...-1]
     end
 
     def peek
@@ -23,7 +23,10 @@ attr_reader :stack
 
         #or
 
-        stack[-1]
+        # stack[-1]
     end
 
+
+    private
+    attr_reader :stack
 end

@@ -6,24 +6,18 @@ class Queue
     end
 
     def enqueue(ele)
-        queue << ele
+        queue.unshift
     end
 
 
     def dequeue
-        queue.shift
-
-        #or
-
-        queue[1..-1]
+        queue.pop
     end
 
     def peek
-        queue.first
-
-        #or
-
-        queue[0]
+        queue.dup
     end
 
+    private
+    attr_reader :queue
 end
