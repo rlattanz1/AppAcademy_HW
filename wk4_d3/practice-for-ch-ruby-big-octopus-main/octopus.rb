@@ -2,17 +2,17 @@
 def sluggish_octopus(arr)
     #nested loop results in n^2 quadratic runtime
 
-    # max_ele = ''
-    # arr.each_with_index do |ele, i|
-    #     (i...arr.size).each do |j|
-    #         if arr[i].length > arr[j].length
-    #             max_ele = ele
-    #         else
-    #             max_ele = arr[j]
-    #         end
-    #     end
-    # end
-    # max_ele
+    max_ele = arr[0]
+    arr.each_with_index do |ele1, i|
+        arr.each_with_index do |ele2, j|
+            if arr[i].length > arr[j].length && j > i
+                max_ele = arr[i]
+            else
+                max_ele = arr[j]
+            end
+        end
+    end
+    max_ele
 end
 
 
